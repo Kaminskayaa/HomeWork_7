@@ -36,8 +36,16 @@ function vowels3(str) {
 }
 console.log(vowels3(a));
 
-
-
-
+// 2
+var names = ["Max", "Vera", "Joe", "Annette", "Sussan"]
+var jobs = ["Butcher", "Programmer", "Doctor", "Teacher", "Lecturer"]
+function combineNameWork(names, jobs) {
+    let result = names.reduce(function (sum, elem, index) {
+        sum[elem] = jobs[index];
+        return sum;
+    }, {});
+    return result;
+}
+console.log(combineNameWork(names, jobs));
 
 
